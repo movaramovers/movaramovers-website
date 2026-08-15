@@ -1,15 +1,13 @@
 [build]
-  command   = "npm run build"
-  publish   = ".netlify/static"
+  command = "npm run build"
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "22"
 
-[functions]
-  directory    = ".netlify/functions"
-  node_bundler = "esbuild"
-
-# All requests not matched by a static file are handled by the SSR function
+# All requests not matched by a static file are handled by the Nitro SSR function.
+# Nitro (netlify preset) outputs to .netlify/functions-internal/server which
+# Netlify automatically exposes as /.netlify/functions/server.
 [[redirects]]
   from   = "/*"
   to     = "/.netlify/functions/server"
