@@ -5,9 +5,32 @@
 [build.environment]
   NODE_VERSION = "22"
 
-# All requests not matched by a static file are handled by the Nitro SSR function.
-# Nitro (netlify preset) outputs to .netlify/functions-internal/server which
-# Netlify automatically exposes as /.netlify/functions/server.
+# Serve static assets directly — must come before the SSR catch-all
+[[redirects]]
+  from   = "/favicon.ico"
+  to     = "/favicon.ico"
+  status = 200
+  force  = false
+
+[[redirects]]
+  from   = "/assets/*"
+  to     = "/assets/:splat"
+  status = 200
+  force  = false
+
+[[redirects]]
+  from   = "/robots.txt"
+  to     = "/robots.txt"
+  status = 200
+  force  = false
+
+[[redirects]]
+  from   = "/sitemap.xml"
+  to     = "/sitemap.xml"
+  status = 200
+  force  = false
+
+# All remaining requests handled by the Nitro SSR function
 [[redirects]]
   from   = "/*"
   to     = "/.netlify/functions/server"
