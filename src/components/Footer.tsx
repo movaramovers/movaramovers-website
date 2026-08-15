@@ -80,7 +80,7 @@ export function Footer() {
               <MapPin className="h-4 w-4 text-gold" aria-hidden="true" /> {CONTACT.location}
             </li>
           </ul>
-          <div className="mt-5 overflow-hidden rounded-xl border border-navy-foreground/15">
+          <div className="mt-5 overflow-hidden rounded-xl border border-navy-foreground/15 mb-20 md:mb-0">
             <iframe
               title="Movara Movers location — Al Majaz 2, Sharjah, UAE"
               src="https://maps.google.com/maps?q=Al+Majaz+2%2C+Sharjah%2C+United+Arab+Emirates&z=15&output=embed"
@@ -103,7 +103,7 @@ export function Footer() {
         src={truckImg}
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute bottom-4 left-15 w-64 select-none opacity-50 lg:w-80"
+        className="pointer-events-none absolute bottom-4 left-2 w-64 select-none opacity-50 lg:w-80 -translate-y-6 md:translate-y-0"
       />
     </footer>
   );

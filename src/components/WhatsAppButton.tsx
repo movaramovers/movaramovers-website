@@ -20,7 +20,7 @@ export function WhatsAppButton() {
         <button
           onClick={scrollToTop}
           aria-label="Scroll to top"
-          className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-navy text-navy-foreground shadow-lg transition-transform hover:scale-105 hover:bg-navy/80"
+          className="inline-flex cursor-pointer h-12 w-12 items-center justify-center rounded-full bg-navy text-navy-foreground shadow-lg transition-transform hover:scale-105 hover:bg-navy/80"
         >
           <ArrowUp className="h-5 w-5" aria-hidden="true" />
         </button>
