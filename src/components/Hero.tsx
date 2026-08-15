@@ -53,7 +53,7 @@ export function Hero() {
       <button
         onClick={prev}
         aria-label="Previous slide"
-        className="absolute cursor-pointer left-4 top-1/2 z-10 -translate-y-1/2 inline-flex h-11 w-11 items-center justify-center rounded-full bg-navy/50 text-navy-foreground backdrop-blur transition-colors hover:bg-gold hover:text-gold-foreground md:left-6"
+        className="absolute cursor-pointer left-4 top-1/2 z-10 -translate-y-1/2 hidden md:inline-flex h-11 w-11 items-center justify-center rounded-full bg-navy/50 text-navy-foreground backdrop-blur transition-colors hover:bg-gold hover:text-gold-foreground md:left-6"
       >
         <ChevronLeft className="h-6 w-6" aria-hidden="true" />
       </button>
@@ -62,7 +62,7 @@ export function Hero() {
       <button
         onClick={next}
         aria-label="Next slide"
-        className="absolute cursor-pointer right-4 top-1/2 z-10 -translate-y-1/2 inline-flex h-11 w-11 items-center justify-center rounded-full bg-navy/50 text-navy-foreground backdrop-blur transition-colors hover:bg-gold hover:text-gold-foreground md:right-6"
+        className="absolute cursor-pointer right-4 top-1/2 z-10 -translate-y-1/2 hidden md:inline-flex h-11 w-11 items-center justify-center rounded-full bg-navy/50 text-navy-foreground backdrop-blur transition-colors hover:bg-gold hover:text-gold-foreground md:right-6"
       >
         <ChevronRight className="h-6 w-6" aria-hidden="true" />
       </button>
