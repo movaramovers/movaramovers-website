@@ -1,0 +1,16 @@
+[build]
+  command   = "npm run build"
+  publish   = ".netlify/static"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[functions]
+  directory    = ".netlify/functions"
+  node_bundler = "esbuild"
+
+# All requests not matched by a static file are handled by the SSR function
+[[redirects]]
+  from   = "/*"
+  to     = "/.netlify/functions/server"
+  status = 200
